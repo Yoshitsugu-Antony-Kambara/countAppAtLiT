@@ -24,8 +24,42 @@ class ViewController: UIViewController {
         number = number + 1
         //ラベルのテキストに、文字列にして表示
         label.text = String(number)
+        if number >= 10 {
+            label.textColor = UIColor.green
+        } else if number <= -10 {
+            label.textColor = UIColor.blue
+        } else {
+            label.textColor = UIColor.black
+        }
     }
 
+    @IBAction func minus() {
+        number -= 1
+        label.text = String(number)
+        if number >= 10 {
+            label.textColor = UIColor.green
+        } else if number <= -10 {
+            label.textColor = UIColor.blue
+        } else {
+            label.textColor = UIColor.black
+        }
+    }
+    
+    @IBAction func clear() {
+        number = 0
+        label.text = String(number)
+    }
+    
+    @IBAction func square() {
+        number = number * number
+        label.text = String(number)
+        if number >= 10 {
+            label.textColor = UIColor.green
+        } else if number <= -10 {
+            label.textColor = UIColor.blue
+        } else {
+            label.textColor = UIColor.black
+        }
+    }
 }
-
 
